@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sneker-web
+  namespace: sneker-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sneker-web
+  template:
+    metadata:
+      labels:
+        app: sneker-web
+    spec:
+      containers:
+        - name: sneker-web
+          image: piyushj01/senk-web
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
