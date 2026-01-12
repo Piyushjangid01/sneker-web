@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sneker-web
+  namespace: sneker-web
+spec:
+  type: NodePort
+  selector:
+    app: sneker-web
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 
