@@ -4,7 +4,7 @@ metadata:
   name: sneker-web
   namespace: sneker-web
 spec:
-  replicas: 1
+  replicas: 5
   selector:
     matchLabels:
       app: sneker-web
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: sneker-web
-          image: piyushj01/senk-webs
+          image: piyushj01/senk-web
           imagePullPolicy: Always
           ports:
             - containerPort: 80
